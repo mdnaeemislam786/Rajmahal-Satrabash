@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Rajmohol Sotrabash</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- font awesome cdn  -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <style>
+        .avatar-preview {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #22c55e;
+        }
+        .file-input-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+        .file-input-wrapper input[type="file"] {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            width: 80px;
+            height: 80px;
+            cursor: pointer;
+        }
+      </style>
+  </head>
+  <body class="max-w-[1920px] m-auto font-sans">
+    <header>
+      <nav class="flex justify-between items-center bg-gray-100 shadow-md px-4 md:px-8 py-3 relative">
+        <div class="site-Logo-top">
+          <a href="index.html" class="font-extrabold text-2xl md:text-3xl lg:text-5xl text-green-500">Rajm<span class="text-red-500">ahal Satra</span>bash</a>
+        </div>
+        
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button id="menu-toggle" class="text-gray-500 hover:text-green-600 focus:outline-none text-2xl">
+            <i id="openMenu" class="fas fa-bars"></i>
+            <i id="closeMenu" class="fa-solid fa-xmark" style="display: none;"></i>
+          </button>
+        </div>
+        
+        <!-- Desktop menu -->
+        <div class="hidden md:flex items-center">
+          <ul class="flex gap-4 lg:gap-6 items-center">
+            <li class="nav-list-item">
+              <a href="index.html" class="text-lg lg:text-2xl font-semibold hover:text-gray-500 hover:underline">Home</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="about.html" class="text-lg lg:text-2xl font-semibold text-green-500 hover:underline">About</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="rooms.html" class="text-lg lg:text-2xl font-semibold hover:text-gray-500 hover:underline">Rooms</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="notice.html" class="text-lg lg:text-2xl font-semibold hover:text-gray-500 hover:underline">Notice</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="others.html" class="text-lg lg:text-2xl font-semibold hover:text-gray-500 hover:underline">Others</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="contacts.html" class="text-lg lg:text-2xl font-semibold hover:text-gray-500 hover:underline">Contacts</a>
+            </li>
+            <li class="site-login-profile">
+              <button class="btn bg-green-500 hover:shadow-xl rounded-full text-lg lg:text-2xl font-bold hover:text-white px-4 lg:px-7 py-2 lg:py-3">
+                Login
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Mobile menu (hidden by default) -->
+      <div id="mobile-menu" class="bg-gray-100 shadow-md hidden">
+        <ul class="flex flex-col justify-center">
+          <li class="border-t border-gray-200">
+            <a href="index.html" class="block py-4 px-8 text-xl font-semibold text-center hover:bg-gray-200">Home</a>
+          </li>
+          <li class="border-t border-gray-200">
+            <a href="about.html" class="block py-4 px-8 text-xl font-semibold text-center hover:bg-gray-200 text-green-500">About</a>
+          </li>
+          <li class="border-t border-gray-200">
+            <a href="rooms.html" class="block py-4 px-8 text-xl font-semibold text-center hover:bg-gray-200">Rooms</a>
+          </li>
+          <li class="border-t border-gray-200">
+            <a href="notice.html" class="block py-4 px-8 text-xl font-semibold text-center hover:bg-gray-200">Notice</a>
+          </li>
+          <li class="border-t border-gray-200">
+            <a href="others.html" class="block py-4 px-8 text-xl font-semibold text-center hover:bg-gray-200">Others</a>
+          </li>
+          <li class="border-t border-gray-200">
+            <a href="contacts.html" class="block py-4 px-8 text-xl font-semibold text-center hover:bg-gray-200">Contacts</a>
+          </li>
+          <li class="border-t border-b border-gray-200">
+            <button class="w-full py-4 px-8 text-xl font-semibold text-center bg-green-500 hover:bg-green-600 text-white">
+              Login
+            </button>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <!-- About Hero Section -->
+      <section class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-8">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">About Rajmohol Sotrabash</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Your home away from home - providing comfortable and secure accommodation for students since 2008</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Story Section -->
+      <section class="py-16 px-4 md:px-8">
+        <div class="container mx-auto">
+          <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+              <img src="https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" 
+                   alt="Our Hostel Building" class="rounded-lg shadow-xl">
+            </div>
+            <div class="md:w-1/2">
+              <h2 class="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
+              <p class="text-lg mb-4">Established in 2008, Rajmohol Sotrabash has been serving students from various educational institutions with quality accommodation at affordable prices. Our journey began with a simple vision: to create a safe, comfortable, and conducive living environment for students pursuing their dreams.</p>
+              <p class="text-lg mb-4">Over the years, we have grown from a small hostel with just 5 rooms to a well-established accommodation facility with 18 rooms, housing over 200 students annually. Our commitment to quality service and student welfare has made us one of the most preferred hostels in the area.</p>
+              <div class="bg-green-100 p-6 rounded-lg border-l-4 border-green-500">
+                <p class="text-green-800 italic">"Our mission is to provide not just a place to stay, but a home where students can thrive academically and socially in a supportive community."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Values Section -->
+      <section class="py-16 bg-gray-100 px-4 md:px-8">
+        <div class="container mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Values</h2>
+            <p class="text-xl text-gray-600">The principles that guide everything we do</p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-lg shadow-md text-center">
+              <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-shield-alt text-green-500 text-2xl"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Safety & Security</h3>
+              <p class="text-gray-700">We prioritize the safety and security of our students with 24/7 surveillance, secure access systems, and a dedicated warden.</p>
+            </div>
+            
+            <div class="bg-white p-8 rounded-lg shadow-md text-center">
+              <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-users text-green-500 text-2xl"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Community</h3>
+              <p class="text-gray-700">We foster a supportive community where students from diverse backgrounds can connect, collaborate, and grow together.</p>
+            </div>
+            
+            <div class="bg-white p-8 rounded-lg shadow-md text-center">
+              <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-graduation-cap text-green-500 text-2xl"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Academic Focus</h3>
+              <p class="text-gray-700">We maintain a conducive environment for studying with dedicated study areas, high-speed internet, and quiet hours.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Management Team Section -->
+      <section class="py-16 px-4 md:px-8">
+        <div class="container mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Management Team</h2>
+            <p class="text-xl text-gray-600">The dedicated people behind Rajmohol Sotrabash</p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="card bg-base-100 shadow-xl">
+              <figure class="px-10 pt-10">
+                <div class="avatar">
+                  <div class="w-24 rounded-full">
+                    <img src="./Assets/r3.jpg" />superintendent
+                  </div>
+                </div>
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title">Md Naeem Islam</h2>
+                <p class="text-green-500 font-semibold">Web-Developer & Maintenance Specialist</p>
+                <p>Web developer managing Rajmahal Satrabash hostel website, ensuring performance, updates, security, and digital growth.</p>
+              </div>
+            </div>
+            
+            <div class="card bg-base-100 shadow-xl">
+              <figure class="px-10 pt-10">
+                <div class="avatar">
+                  <div class="w-24 rounded-full">
+                    <img src="./Assets/user.png" />
+                  </div>
+                </div>
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title">Md Rasel</h2>
+                <p class="text-green-500 font-semibold">Superintendent</p>
+                <p>Superintendent at Rajmahal Satrabash, ensuring student well-being, seamless operations, discipline, and a nurturing hostel environment.</p>
+              </div>
+            </div>
+            
+            <div class="card bg-base-100 shadow-xl">
+              <figure class="px-10 pt-10">
+                <div class="avatar">
+                  <div class="w-24 rounded-full">
+                    <img src="./Assets/user.png" />
+                  </div>
+                </div>
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title">MD Foisal Ahmed</h2>
+                <p class="text-green-500 font-semibold">Founder</p>
+                <p>Founder of Rajmahal Satrabash, dedicated to providing a safe, supportive, and thriving environment for students.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="py-16 bg-gray-100 px-4 md:px-8">
+        <div class="container mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">What Students Say About Us</h2>
+            <p class="text-xl text-gray-600">Hear from our current and former residents</p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="card bg-base-100 shadow-xl">
+              <div class="card-body">
+                <div class="flex items-center mb-4">
+                  <div class="avatar">
+                    <div class="w-12 rounded-full">
+                      <img src="./Assets/r3.jpg" />
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="text-xl font-bold">Md Naeem Islam</h4>
+                    <p class="text-gray-500">EMT Student</p>
+                  </div>
+                </div>
+                <p class="text-gray-700">"The hostel facilities are excellent. The high-speed internet helps me with my studies, and the food is always fresh and tasty."</p>
+                <div class="rating rating-md rating-half mt-4">
+                  <input type="radio" name="rating-10-1" class="rating-hidden" />
+                  <input type="radio" name="rating-10-1" class="bg-green-500 mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-10-1" class="bg-green-500 mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-10-1" class="bg-green-500 mask mask-star-2 mask-half-1"  />
+                  <input type="radio" name="rating-10-1" class="bg-green-500 mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-10-1" class="bg-green-500 mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-10-1" class="bg-green-500 mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-10-1" class="bg-green-500 mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-10-1" class="bg-green-500 mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-10-1" class="bg-green-500 mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-10-1" class="bg-green-500 mask mask-star-2 mask-half-2" checked/>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card bg-base-100 shadow-xl">
+              <div class="card-body">
+                <div class="flex items-center mb-4">
+                  <div class="avatar">
+                    <div class="w-12 rounded-full">
+                      <img src="./Assets/r2.jpg" />
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="text-xl font-bold">Md Fahad</h4>
+                    <p class="text-gray-500">AIDT Student</p>
+                  </div>
+                </div>
+                <p class="text-gray-700">"I feel completely safe here. The security is excellent, and the warden is always available to help with any issues."</p>
+                <div class="rating rating-md rating-half mt-4">
+                  <input type="radio" name="rating-10-2" class="rating-hidden" />
+                  <input type="radio" name="rating-10-2" class="bg-green-500 mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-10-2" class="bg-green-500 mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-10-2" class="bg-green-500 mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-10-2" class="bg-green-500 mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-10-2" class="bg-green-500 mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-10-2" class="bg-green-500 mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-10-2" class="bg-green-500 mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-10-2" class="bg-green-500 mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-10-2" class="bg-green-500 mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-10-2" class="bg-green-500 mask mask-star-2 mask-half-2" checked/>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card bg-base-100 shadow-xl">
+              <div class="card-body">
+                <div class="flex items-center mb-4">
+                  <div class="avatar">
+                    <div class="w-12 rounded-full">
+                      <img src="./Assets/r1.jpg" />
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="text-xl font-bold">MD Raju</h4>
+                    <p class="text-gray-500">CST Student</p>
+                  </div>
+                </div>
+                <p class="text-gray-700">"The location is perfect - close to my university and with easy access to public transport. The common areas are great for group study."</p>
+                <div class="rating rating-md rating-half mt-4">
+                  <input type="radio" name="rating-10-3" class="rating-hidden" />
+                  <input type="radio" name="rating-10-3" class="bg-green-500 mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-10-3" class="bg-green-500 mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-10-3" class="bg-green-500 mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-10-3" class="bg-green-500 mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-10-3" class="bg-green-500 mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-10-3" class="bg-green-500 mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-10-3" class="bg-green-500 mask mask-star-2 mask-half-1"  />
+                  <input type="radio" name="rating-10-3" class="bg-green-500 mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-10-3" class="bg-green-500 mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-10-3" class="bg-green-500 mask mask-star-2 mask-half-2" checked/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Comment Section -->
+      <section class="py-16 px-4 md:px-8">
+        <div class="container mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Share Your Experience</h2>
+            <p class="text-xl text-gray-600">We value feedback from our students and visitors</p>
+          </div>
+          
+          <div class="max-w-3xl mx-auto bg-white shadow-md rounded-lg p-8 mb-12">
+            <h3 class="text-2xl font-bold mb-6">Leave a Comment</h3>
+            <form id="commentForm">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label for="name" class="block text-gray-700 mb-2">Your Name</label>
+                        <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 mb-2">Email Address</label>
+                        <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <label for="course" class="block text-gray-700 mb-2">Your Department</label>
+                    <input type="text" id="course" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                </div>
+                
+                <div class="mb-6">
+                    <label for="comment" class="block text-gray-700 mb-2">Your Comment</label>
+                    <textarea id="comment" rows="5" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required></textarea>
+                </div>
+                
+                <div class="flex flex-col md:flex-row justify-between items-center mb-6 gap-4">
+                    <div>
+                        <label class="block text-gray-700 mb-2">Rating</label>
+                        <div class="rating rating-lg rating-half">
+                            <input type="radio" name="rating-11" class="rating-hidden" />
+                            <input type="radio" name="rating-11" class="bg-green-500 mask mask-star-2 mask-half-1" value="0.5"/>
+                            <input type="radio" name="rating-11" class="bg-green-500 mask mask-star-2 mask-half-2" value="1"/>
+                            <input type="radio" name="rating-11" class="bg-green-500 mask mask-star-2 mask-half-1" value="1.5"/>
+                            <input type="radio" name="rating-11" class="bg-green-500 mask mask-star-2 mask-half-2" value="2"/>
+                            <input type="radio" name="rating-11" class="bg-green-500 mask mask-star-2 mask-half-1" value="2.5"/>
+                            <input type="radio" name="rating-11" class="bg-green-500 mask mask-star-2 mask-half-2" value="3"/>
+                            <input type="radio" name="rating-11" class="bg-green-500 mask mask-star-2 mask-half-1" value="3.5"/>
+                            <input type="radio" name="rating-11" class="bg-green-500 mask mask-star-2 mask-half-2" value="4"/>
+                            <input type="radio" name="rating-11" class="bg-green-500 mask mask-star-2 mask-half-1" value="4.5"/>
+                            <input type="radio" name="rating-11" class="bg-green-500 mask mask-star-2 mask-half-2" value="5" checked/>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col items-center">
+                        <label class="block text-gray-700 mb-2">Your Avatar</label>
+                        <div class="file-input-wrapper">
+                            <img id="avatarPreview" src="./Assets/user.png" alt="Default Avatar" class="avatar-preview">
+                            <input type="file" id="avatarUpload" accept="image/*" class="">
+                        </div>
+                        <p class="text-xs text-gray-500 mt-1">Click to upload</p>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn bg-green-500 hover:bg-green-600 text-white text-lg w-full py-3 rounded-lg">
+                    <i class="fas fa-paper-plane mr-2"></i> Submit Comment
+                </button>
+            </form>
+          </div>
+          
+          <div id="commentsContainer" class="max-w-3xl mx-auto">
+            <h3 class="text-2xl font-bold mb-6">Recent Comments</h3>
+            <!-- Comments will be dynamically added here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="py-16 px-4 md:px-8 bg-green-50">
+        <div class="container mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">Experience Rajmohol Sotrabash Yourself</h2>
+          <p class="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">Come visit our hostel, meet our team, and see why we're the preferred choice for students in Brahmanbaria.</p>
+          <div class="flex flex-col md:flex-row justify-center gap-4">
+            <button class="btn bg-green-500 hover:bg-green-600 text-white text-xl px-8 py-4 rounded-lg">Schedule a Visit</button>
+            <button class="btn btn-outline text-xl px-8 py-4 rounded-lg mt-4 md:mt-0">Contact Us</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer flex-col md:flex md:flex-row items-center justify-between p-10 bg-neutral text-neutral-content px-8">
+      <div>
+        <span class="footer-title">Rajmohol Sotrabash</span> 
+        <p>Providing quality hostel accommodation since 2008</p>
+        <p>Dhaka-Sylhet Highway,<br>Bijoynagar Upzila, Brahmanbaria Zila,<br> Islampur</p>
+        <p>Email: md.abu.naeem786@gmail.com</p>
+        <p>Phone: +880 182 959 4791</p>
+      </div> 
+      <div>
+        <span class="footer-title">Quick Links</span> 
+        <a href="index.html" class="link link-hover">Home</a>
+        <a href="about.html" class="link link-hover">About us</a>
+        <a href="rooms.html" class="link link-hover">Rooms</a>
+        <a href="gallery.html" class="link link-hover">Gallery</a>
+      </div> 
+      <div>
+        <span class="footer-title">Legal</span> 
+        <a class="link link-hover">Terms of use</a>
+        <a class="link link-hover">Privacy policy</a>
+        <a class="link link-hover">Cookie policy</a>
+      </div>
+      <div>
+        <span class="footer-title">Connect With Us</span> 
+        <div class="grid grid-flow-col gap-4">
+          <a><i class="fab fa-facebook-f text-2xl"></i></a>
+          <a><i class="fab fa-twitter text-2xl"></i></a>
+          <a><i class="fab fa-instagram text-2xl"></i></a>
+          <a><i class="fab fa-youtube text-2xl"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="Scripts/script.js"></script>
+  </body>
+</html>
